@@ -25,6 +25,24 @@ paths:
                 type: array
                 items:
                   $ref: '#/components/schemas/Product'
+  
+  /get_products_barcode/{barcode}:
+    description: Получить номенклатуру по штрихкоду
+    parameters:
+      - name: barcode
+        in: path
+        description: Штрихкод
+        required: true
+        schema:s
+          type: string
+    get:
+      responses:
+          '200':
+            description: OK
+            content:
+                application/json:
+                  schema:
+                    $ref: '#/components/schemas/Product'
 
 components:
   schemas:
