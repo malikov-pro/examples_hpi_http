@@ -1,0 +1,41 @@
+openapi: '3.0.2'
+info:
+  title: API HTTP сервисов по статьям Хаюк Петра
+  version: '1.0'
+servers:
+  - url: http://localhost/{base_name}/hs/{hs_name}
+    variables:
+      base_name:
+        default: demo
+        description: Имя публикации базы
+      hs_name:
+        description: Имя HTTP сервиса
+        default: example
+
+paths:
+  /get_products:
+    description: Получение списка номенклатуры
+    get:
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: '#/components/schemas/Product'
+
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        barcode:
+          type: string
+        cod:
+          type: string
+        name:
+          type: string
+        articul:
+          type: string
