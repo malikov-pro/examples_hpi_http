@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "72d22be9-0a39-4c3b-bd38-b4e1bcbc047a",
+		"name": "Examples_to_hpi",
+		"description": "Примеры запросов по статьям Хаюк Петра",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "1. Базовая настройка, https://infostart.ru/1c/articles/1293341/",
+			"item": [
+				{
+					"name": "get_product_list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": ""
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "bd490cce-5274-43f6-89a0-68167e8ad7c4",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "2181ed97-2a27-424b-ab16-e57942e2cc0d",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "2. Передача параметра https://infostart.ru/1c/articles/1296740/",
+			"item": [
+				{
+					"name": "get_products_barcode",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost/{{base_name}}/hs/{{hs_name}}/get_products_barcode/{{barcode}}",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"path": [
+								"{{base_name}}",
+								"hs",
+								"{{hs_name}}",
+								"get_products_barcode",
+								"{{barcode}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "6b1b7fb0-476a-4004-a54f-29378e0a3594",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "7673a9fa-dba4-4064-ba48-2e8fd53b7f6c",
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "bb7d8c54-3d8d-4755-871f-82c5471b4625",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "a4fcf96c-d3c5-43af-874a-1f22ce7cedfe",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "89c8d1bb-29b1-4ad4-ab4a-0ef8f44f83c9",
+			"key": "hostname",
+			"value": "localhost"
+		},
+		{
+			"id": "124d46dc-d575-4f0d-a627-6dcab664acc9",
+			"key": "hs_name",
+			"value": ""
+		},
+		{
+			"id": "b861f7ca-57b4-4351-bf63-e45b57004371",
+			"key": "base_name",
+			"value": ""
+		},
+		{
+			"id": "998fdda0-b64e-4e3e-b95b-a6a4257e2db2",
+			"key": "barcode",
+			"value": ""
+		}
+	],
+	"protocolProfileBehavior": {}
+}
