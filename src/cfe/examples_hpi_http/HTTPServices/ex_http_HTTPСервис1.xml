@@ -39,6 +39,35 @@
 					</Method>
 				</ChildObjects>
 			</URLTemplate>
+			<URLTemplate uuid="30b2c371-ccc9-4c45-97e0-f2e6acb4e3bd">
+				<Properties>
+					<Name>ПолучитьНоменклатуруПоШтрихкоду</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получить номенклатуру по штрихкоду</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/get_products_barcode/{barcode}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="02f710b9-99c7-4694-bbcc-ad1477fcf239">
+						<Properties>
+							<Name>GET</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>GET</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ПолучитьНоменклатуруПоШтрихкодуGET</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
 		</ChildObjects>
 	</HTTPService>
 </MetaDataObject>
